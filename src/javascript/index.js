@@ -14,7 +14,6 @@ setaAvancar.addEventListener("click", function(){
     mostrarOuEscoderSetas();
 });
 
-
 setaVoltar.addEventListener("click", function(){
     if (imagemAtual === 0){
         return;
@@ -23,7 +22,7 @@ setaVoltar.addEventListener("click", function(){
     imagemAtual--;
     mostrarImagemAtual();
     mostrarOuEscoderSetas();
-})
+});
 
 function mostrarOuEscoderSetas(){
     const naoEhAPrimeiraImagem = imagemAtual !== 0;
@@ -31,22 +30,21 @@ function mostrarOuEscoderSetas(){
         setaVoltar.classList.remove("opacidade");
     }else{
         setaVoltar.classList.add("opacidade");
-    }
+    };
 
     const chegouNaUltimaImagem = imagemAtual !== 0 && imagemAtual === imagens.length -1;
     if (chegouNaUltimaImagem){
         setaAvancar.classList.add("opacidade");
     }else{
         setaAvancar.classList.remove("opacidade");
-    }
-}
-
+    };
+};
 
 function mostrarImagemAtual() {
     imagens[imagemAtual].classList.add("mostrar");
-}
+};
 
 function esconderImagemAberta(){
     const imagemAberta = document.querySelector('.mostrar');
     imagemAberta.classList.remove("mostrar");
-}
+};
