@@ -8,8 +8,8 @@ setaAvancar.addEventListener("click", function(){
     if (imagemAtual === imagens.length -1){
         return;
     }
-    esconderImagemAberta();
     imagemAtual++;
+    esconderImagemAberta();
     mostrarImagemAtual();
     mostrarOuEscoderSetas();
 });
@@ -18,8 +18,8 @@ setaVoltar.addEventListener("click", function(){
     if (imagemAtual === 0){
         return;
     }
-    esconderImagemAberta();
     imagemAtual--;
+    esconderImagemAberta(); 
     mostrarImagemAtual();
     mostrarOuEscoderSetas();
 });
